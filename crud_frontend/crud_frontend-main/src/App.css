@@ -1,3 +1,12 @@
+/* General body and root styling for a clean base */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,114 +14,157 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* ===== Custom Styles for Form and Table Layout ===== */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.table th,
-.table td {
-  vertical-align: middle;
-  text-align: center;
-}
-
-.table {
-  margin-top: 20px;
-}
-
-th,
-td {
-  padding: 10px !important;
-}
-
-.actions-cell button {
-  margin-right: 5px;
-}
-
-/* ===== Heading and Form Container Styling ===== */
-h2, h3 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #333;
-}
+/* --- Form and Container Styling --- */
 
 .form-container {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
-}
-
-.form-container {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer, more modern shadow */
+  margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
 }
 
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .form-label {
-  font-weight: bold;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-.table th,
-.table td {
-  vertical-align: middle;
+/* Styling for all input fields and selects */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff; /* Primary brand color on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Style the "Insert" button */
+.insert-btn {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 1rem;
+}
+
+.insert-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* --- Product List Table Styling --- */
+
+.table-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h3 {
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.5rem;
 }
 
+.product-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+  padding: 1.25rem 1rem;
+  text-align: left;
+}
+
+.product-table thead th {
+  background-color: #e9ecef; /* Light grey header */
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #ddd;
+}
+
+.product-table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.product-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa; /* Zebra stripes for readability */
+}
+
+.product-table tbody tr:hover {
+  background-color: #e9f0f7; /* Subtle hover effect */
+}
+
+.product-table tbody td {
+  border-bottom: 1px solid #eee;
+}
+
+/* Action buttons in the table */
 .actions-cell button {
-  margin-right: 5px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-right: 0.5rem;
+}
+
+.actions-cell .edit-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.actions-cell .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.actions-cell button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
