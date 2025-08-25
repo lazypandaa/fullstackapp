@@ -10,7 +10,7 @@ pipeline {
         BACKEND_DIR = 'crud_backend/crud_backend-main'
         FRONTEND_DIR = 'crud_frontend/crud_frontend-main'
 
-        TOMCAT_URL = 'http://98.81.3.128:9090/manager/text'
+        TOMCAT_URL = 'http://3.84.127.15:9090/manager/text'
         TOMCAT_USER = 'admin'
         TOMCAT_PASS = 'admin'
 
@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/yogiganesh108/fullstackapp.git', branch: 'main'
+                git url: 'https://github.com/lazypandaa/fullstackapp.git', branch: 'main'
             }
         }
 
